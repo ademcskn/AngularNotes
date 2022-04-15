@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+## Notlarım
+--angular projesini çalıştırmak için ng serve --open diyoruz.
+--component oluşturmak için vs code da klasöre sağ tıkla Open in Integrated Terminal diyerek termimanalde yola ulaşıyoruz. Sonra ng g component product diyerek product isminde component oluşturuabiliriz.
+--app.module.ts dosyasına eklenen componentler import ediliyor.
+--main.ts dosyasında hangi modulden başlacağını söylüyoruz.
+--*ngFor gibi elementler directive dir. html elementini manipüle ediyor. ngFor ise elementi tekrarla demek.
+--terminale npm install bootstrap diyerek kurulum yapabiliyoruz. yolun bir önemi yok.
+--yeni paket kurduktan sonra sonuçları görebilmek için yayını durdurup tekrar yayınlıyoruz.
