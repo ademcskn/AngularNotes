@@ -36,3 +36,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - *ngFor gibi elementler directive dir. html elementini manipüle ediyor. ngFor ise elementi tekrarla demek.
 - terminale npm install bootstrap diyerek kurulum yapabiliyoruz. yolun bir önemi yok.
 - yeni paket kurduktan sonra sonuçları görebilmek için yayını durdurup tekrar yayınlıyoruz.
+- angular ile apiye istekte bulunmak için gerekli ayarlar yapıldı.
+- api de cors izni için startup dosyasına cors ayarı eklendi.
