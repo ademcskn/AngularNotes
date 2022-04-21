@@ -1,7 +1,7 @@
 <div *ngIf="dataLoaded==false" class="spinner-border text-dark" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
-
+<!-- 
 <table *ngIf="dataLoaded==true" class="table">
   <thead>
     <tr>
@@ -15,4 +15,8 @@
       <td>{{brand.name}}</td>
     </tr>
   </tbody>
-</table>
+</table> -->
+
+<ul class="list-group" style="padding: 30px 0px;">
+  <li (click)="setCurrentBrand(brand)" *ngFor="let brand of brands" class="list-group-item">{{brand.name}}</li>
+</ul>

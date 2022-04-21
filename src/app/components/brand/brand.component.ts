@@ -23,4 +23,7 @@ export class BrandComponent implements OnInit {
       this.dataLoaded=true;
     });
   }
+  setCurrentBrand(brand:Brand){
+    console.log(brand.name);
+  }
 }

@@ -31,6 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Notlarım
 - angular projesini çalıştırmak için ng serve --open diyoruz.
 - component oluşturmak için vs code da klasöre sağ tıkla Open in Integrated Terminal diyerek termimanalde yola ulaşıyoruz. Sonra ng g component product diyerek product isminde component oluşturuabiliriz.
+- service oluşturmak için service klasörünü terminalde açtıktan sonra ng g service rental diyerek rental service i açabiliriz.
 - app.module.ts dosyasına eklenen componentler import ediliyor.
 - main.ts dosyasında hangi modulden başlacağını söylüyoruz.
 - *ngFor gibi elementler directive dir. html elementini manipüle ediyor. ngFor ise elementi tekrarla demek.
@@ -38,3 +39,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - yeni paket kurduktan sonra sonuçları görebilmek için yayını durdurup tekrar yayınlıyoruz.
 - angular ile apiye istekte bulunmak için gerekli ayarlar yapıldı.
 - api de cors izni için startup dosyasına cors ayarı eklendi.
+- httpClient ile api isteğinde bulunabilmek için app-module de HttpClient ı import etmeliyiz imports da da gösterilmesi lazım.

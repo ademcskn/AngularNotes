@@ -9,6 +9,7 @@ import { BrandComponent } from './components/brand/brand.component';
 import { CarComponent } from './components/car/car.component';
 import { ColorComponent } from './components/color/color.component';
 import { CustomerComponent } from './components/customer/customer.component';
+import { RentalComponent } from './components/rental/rental.component';
 
 @NgModule({
   //bir component kullanacağımız zaman buraya ekliyoruz.
@@ -18,7 +19,8 @@ import { CustomerComponent } from './components/customer/customer.component';
     BrandComponent,
     CarComponent,
     ColorComponent,
-    CustomerComponent
+    CustomerComponent,
+    RentalComponent
   ],
   //bizim yazmadığım modulleri de buraya yazıyoruz.
   imports: [
