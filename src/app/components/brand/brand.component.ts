@@ -11,6 +11,7 @@ export class BrandComponent implements OnInit {
   brands: Brand[] = [];
   dataLoaded = false;
   currentBrand: Brand;
+  emptyBrand : Brand;
 
   constructor(private branchService: BrandService) {}
 
@@ -24,6 +25,12 @@ export class BrandComponent implements OnInit {
       this.dataLoaded = true;
     });
   }
+
+  setCurrentBrandAll(){
+    this.currentBrand = this.emptyBrand; 
+    this.getCurrentBrandClass(this.currentBrand);
+  }
+
   setCurrentBrand(brand: Brand) {
     this.currentBrand = brand;
   }
@@ -38,7 +45,7 @@ export class BrandComponent implements OnInit {
 
   getAllBrandClass() {
     if (!this.currentBrand) {
-      return 'list-gorup-item active';
+      return 'list-group-item active';
     } else {
       return "list-group-item"
     }
