@@ -42,3 +42,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - httpClient ile api isteğinde bulunabilmek için app-module de HttpClient ı import etmeliyiz imports da da gösterilmesi lazım.
 - currentBrand: Brand; gibi bir değişkene direkt interface i atadığımız zaman new leme yapmadığımız için hata alıyoruz. New lemek için class a ihtiyaç olduğundan gerek duymadık. Bu hatayı gidermek için tsconfig.json dosyasında --  "strictPropertyInitialization": false -- değerini false yaptık. 
 - component deki bilgilere göre html tarafında property değiştirmek istersek ilgili prop u köşeli parantez içine alıyoruz. [class] gibi...
+- [(ngModel)] input da çalışması için app.modules.ts ye FormsModule ü import ettik.
+- FormsModule olarak da importlara ekledik

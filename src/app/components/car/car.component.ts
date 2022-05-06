@@ -11,6 +11,7 @@ import { CarService } from 'src/app/services/car.service';
 export class CarComponent implements OnInit {
   cars: Car[] = [];
   dataLoaded = false;
+  filterText = '';
 
   constructor(
     private carService: CarService,
@@ -21,11 +22,9 @@ export class CarComponent implements OnInit {
     this.activatedRouted.params.subscribe((params) => {
       if (params['brandId']) {
         this.getCarsByBrand(params['brandId']);
-      } 
-      else if(params['colorId']){
-        this.getCarsByColor(params['colorId'])
-      }
-      else {
+      } else if (params['colorId']) {
+        this.getCarsByColor(params['colorId']);
+      } else {
         this.getCars();
       }
     });
@@ -44,10 +43,10 @@ export class CarComponent implements OnInit {
     });
   }
 
-  getCarsByColor(colorId:number){
+  getCarsByColor(colorId: number) {
     this.carService.getCarsByColor(colorId).subscribe((response) => {
       this.cars = response.data;
       this.dataLoaded = true;
-    })
+    });
   }
 }
