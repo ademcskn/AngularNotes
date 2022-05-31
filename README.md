@@ -44,3 +44,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - component deki bilgilere göre html tarafında property değiştirmek istersek ilgili prop u köşeli parantez içine alıyoruz. [class] gibi...
 - [(ngModel)] input da çalışması için app.modules.ts ye FormsModule ü import ettik.
 - FormsModule olarak da importlara ekledik
+- tsconfig.json dosyasına   "strictPropertyInitialization": false olarak ekledik nesneyi initializer etmemek için. (newlememek için)

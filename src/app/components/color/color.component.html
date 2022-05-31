@@ -2,8 +2,6 @@
   <span class="visually-hidden">Loading...</span>
 </div>
 
-
-
 <ul class="list-group" style="padding: 30px 0px;">
   <li (click)="setCurrentColorAll()" [class]="getAllColorClass()" routerLink="/cars">Tüm Renkler</li>
   <li (click)="setCurrentColor(color)" [class]="getCurrentColorClass(color)" routerLink="/cars/color/{{color.id}}"
