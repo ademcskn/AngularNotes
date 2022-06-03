@@ -2,10 +2,10 @@
   <span class="visually-hidden">Loading...</span>
 </div>
 <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Araba Ara</label>
+  <label for="filterText" class="form-label">Araba Ara</label>
   <input type="text" class="form-control" [(ngModel)]="filterText" id="filterText" placeholder="isim araması yapınız">
 </div>
-<div *ngIf="filterText.length>0" class="alert alert-success">
+<div *ngIf="filterText.length>1" class="alert alert-success">
   {{filterText}} aradınız
 </div>
 <table *ngIf="dataLoaded==true" class="table">
@@ -18,17 +18,19 @@
       <th>Daily Price</th>
       <th>Price with VAT </th>
       <th>Description</th>
+      <th></th>
     </tr>
-  </thead>
+  </thead> 
   <tbody>
     <tr *ngFor="let car of cars |filterPipe:filterText">
-      <td class="col-md-1">{{car.id}}</td>
-      <td class="col-md-1">{{car.brandId}}</td>
-      <td class="col-md-1">{{car.colorId}}</td>
-      <td class="col-md-3">{{car.name |uppercase}}</td>
-      <td class="col-md-3">{{car.dailyPrice}}</td>
-      <td class="col-md-3">{{car.dailyPrice |vatAdded:10}}</td>
-      <td class="col-md-3">{{car.description}}</td>
+      <td>{{car.id}}</td>
+      <td>{{car.brandId}}</td>
+      <td>{{car.colorId}}</td>
+      <td>{{car.name |uppercase}}</td>
+      <td>{{car.dailyPrice}}</td>
+      <td>{{car.dailyPrice |vatAdded:10 |currency:"₺":"symbol"}}</td>
+      <td>{{car.description}}</td>
+      <td><button (click)="addToCart(car)" class="btn btn-success btn-sm">Sepete ekle</button></td>
     </tr>
   </tbody>
 </table>
