@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NaviComponent } from './components/navi/navi.component';
@@ -13,9 +13,11 @@ import { RentalComponent } from './components/rental/rental.component';
 import { VatAddedPipe } from './pipes/vat-added.pipe';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 import { ToastrModule } from 'ngx-toastr';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 import { CarAddComponent } from './components/car-add/car-add.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 @NgModule({
   //bir component kullanacağımız zaman buraya ekliyoruz.
   declarations: [
@@ -29,7 +31,8 @@ import { CarAddComponent } from './components/car-add/car-add.component';
     VatAddedPipe,
     FilterPipePipe,
     CartSummaryComponent,
-    CarAddComponent
+    CarAddComponent,
+    LoginComponent,
   ],
   //bizim yazmadığım modulleri de buraya yazıyoruz.
   imports: [
@@ -40,10 +43,16 @@ import { CarAddComponent } from './components/car-add/car-add.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
-      positionClass:"toast-bottom-right"
-    })
+      positionClass: 'toast-bottom-right',
+    }),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
