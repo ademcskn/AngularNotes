@@ -46,6 +46,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - FormsModule olarak da importlara ekledik
 - tsconfig.json dosyasına "strictPropertyInitialization": false olarak ekledik nesneyi initializer etmemek için. (newlememek için)
 - pipe lar elimizdeki veriyi daha farklı biçimde göstermemize yarıyor. örn. uppercase gibi
-- notification için npm install ngx-toastr kurduk. Bu paket anguların animasyon paketini de kullabildiği için npm install @angular/animations da kurduk. daha sonra angular.json dosyasında style kısmına ekliyoruz. daha sonra app.module kısmına da ekliyoruz. kullanmak istediğimiz html in cs dosyasında constructor kısmına service olarak da ekliyoruz.
+- notification için npm install ngx-toastr kurduk. Bu paket anguların animasyon paketini de kullanabildiği için npm install @angular/animations da kurduk. daha sonra angular.json dosyasında style kısmına ekliyoruz. daha sonra app.module kısmına da ekliyoruz. kullanmak istediğimiz html in cs dosyasında constructor kısmına service olarak da ekliyoruz.
 - angular da html de href yok
-- null gelebilir hatası hatası için tsconfig.json dosyasına "strictNullChecks": false, ekledik
+- null gelebilir hatası için tsconfig.json dosyasına "strictNullChecks": false, ekledik
